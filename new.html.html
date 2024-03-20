@@ -1,22 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <!-- Some HTML goes here -->
-   <title>5 Things to Know About Rattlesnakes and Their Babies</title>
+   <title>Ohio</title>
+   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-<img src="UniversityLogo.png" alt="Logo of The University of Arizona">
-  
-<nav>
-   <a href="solitare.html">Solitare1</a>
-   <a href="solitare2.html">Solitare2</a>
+    <header>
+        <h1 id="h1color">Ohio "The Buckeye State"  </h1>
+        <p>Ohio has many large cities: The three largest cities in Ohio are Columbus, Cleveland and Cincinnati</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cities.html">Cities</a>
+        <a href="cities1.html">Columbus</a>
+        <a href="cities2.html">Cleveland</a>
+        <a href="cities3.html">Cincinnati</a>
+        
+    </nav>  
+    <img src="misc/Ohio-Map.jpg" alt="Ohio State" width="450" height="450" class="float-right">
+
+<section>
+    <h2 id="homepage">The Biggest Cities in the State of Ohio</h2>
+    <ol>
+        <li>Capital city of Columbus</li>
+        <li>Cleveland</li>
+        <li>Cincinnati</li>
+    </ol>
+    
+</section>
+
+<aside>
+    <h2>Additional Information about Ohio</h2>
+    <ul>
+        <li>Ohio is the 7th Largest State by population in America with 11,785,935 people living in the state.</li>
+        <li>Lots of outdoor activites</li>
+        <li>My home state where alot of my family lives</li>
+    </ul>
    
-</nav>  
 
+    <form action="">
+        <p>
+            <label for="first">First Name:</label>
+            <input type="text" name="first" id="first">
+        </p>
+        <p>
+            <label for="last">Last Name:</label>
+            <input type="text" name="last" id="last">
+        </p>
+        <p>
+            <label for="email">Email Address:</label>
+            <input type="text" name="email" id="email">
+        </p>
+        <p>
+            <label for="confirm_email">Confirm Email Address:</label>
+            <input type="text" name="confirm_email" id="confirm_email">
+            <span id="email_error" style="color: red;"></span> 
+        </p>
+        <p>
+            <label for="text">Ask a question?</label>
+            <input type="text" name="text" id="text">
+        </p>
+    <input type="submit" value="Submit" onclick="validateForm(event)">
+    </form>
+    
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); 
 
-</ol>
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirm_email").value;
+            if (email !== confirmEmail) {
+                document.getElementById("email_error").innerText = "Email addresses do not match";
+            } else {
+                document.getElementById("email_error").innerText = "Email addresses match!";    
+            }
+        }
+    </script>
+
+    <p id="bottom-group">For additional information about the state of Ohio visit the Goverment Website below.</p>
+    <a href="https://ohio.gov/" target="_blank" id="bottom-group">Official Ohio Goverment Website</a>
+    
+
+</aside>
 
 </body>
 </html>
